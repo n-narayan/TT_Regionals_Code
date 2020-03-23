@@ -217,14 +217,34 @@ void skills(){
   //Reverse, get one cube from the 4 stack and tower it
   drive(rev, 15, 80, 0);
   setDrive(0,0);
-  gyroTurn(right, 30, 50);
+  gyroTurn(right, 90, 50);
   pros::delay(100);
 
   runIntake(1);
-  drive(fwd, 20, 80, 0);
+  drive(fwd, 10, 80, 0);
   pros::delay(600);
   stopIntake();
 
+  drive(rev, 5, 60, 0, false);
+  gyroTurn(left, 20, 50);
+  drive(fwd, 20, 80, 0);
+
   tower(false, low);
   pros::delay(500);
+
+  //Get the next line of cubes
+  drive(rev, 20, 80, 0);
+  gyroTurn(right, 0, 80);
+
+  runIntake(1);
+  drive(fwd, 100, 80, 0);
+  //pros::delay(3000);
+  stopIntake();
+
+  //Deposit those
+  gyroTurn(left, 90, 80);
+  drive(fwd, 20, 80, 8);
+  tilt(deposit);
+  pros::delay(500);
+  drive(rev, 10, 60, false);
 }
