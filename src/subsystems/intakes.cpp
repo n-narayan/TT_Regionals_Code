@@ -1,6 +1,14 @@
 #include "main.h"
 
-//Run the intake to be intaking cubes
+/**
+ * Run the intake to be intaking cubes
+ * 
+ * @param direction (intake or outtake)
+ * 
+ * @return none
+ * 
+ * */
+
 void runIntake(int direction){
   intakeLeft.move(127 * direction);
   intakeRight.move(127 * direction);
@@ -11,18 +19,40 @@ void runIntake(int direction){
   }
 }
 
+/**
+ * Run the intake to be intaking cubes at a slower pace for precision
+ * 
+ * @param direction (intake or outtake)
+ * 
+ * @return none
+ * 
+ * */
 void slowIntake(int direction){
   intakeLeft.move(80 * direction);
   intakeRight.move(80 * direction);
 }
 
-//Stop the intake
+/**
+ * Cut power to the intakes
+ * 
+ * @param none
+ * 
+ * @return none
+ * 
+ * */
 void stopIntake(){
   intakeLeft.move(0);
   intakeRight.move(0);
 }
 
-//Driver Control
+/**
+ * Operate in opcontrol()
+ * 
+ * @param none
+ * 
+ * @return none
+ * 
+ * */
 void runIntakeDrive(){
   if(TeflonMenace.get_digital(pros::E_CONTROLLER_DIGITAL_R1)==1)
     runIntake(1);

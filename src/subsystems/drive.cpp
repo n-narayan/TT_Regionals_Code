@@ -160,7 +160,7 @@ void arcadeDrive(){
 *
 * @param direction (fwd or rev)
 * @param target in inches
-* @Param desired voltage (positive number)
+* @param desired voltage (positive number)
 * @return none
 */
 void simpleDrive(direction x, float target, float voltage){
@@ -188,7 +188,7 @@ void simpleDrive(direction x, float target, float voltage){
 *
 * @param direction (fwd or rev)
 * @param target in inches
-* @Param desired voltage (positive number)
+* @param desired voltage (positive number)
 * @param should the robot autocorrect itself for straightness?
          yes for almost every situation, but not all (i.e intaking)
          defaults to true
@@ -279,7 +279,7 @@ void drive(direction x, float target, float maxVoltage, int cubeNum, bool driveS
 *
 * @param direction (left or right)
 * @param target in degrees
-* @Param desired voltage (positive number)
+* @param desired voltage (positive number)
 * @return none
 */
 void gyroTest(direction x, int degrees, int voltage){
@@ -310,7 +310,7 @@ void gyroTest(direction x, int degrees, int voltage){
 *
 * @param direction (left or right)
 * @param target in degrees
-* @Param desired voltage (positive number)
+* @param desired voltage (positive number)
 * @return none
 */
 void gyroTurn(direction x, float degrees, float maxVoltage){
@@ -367,7 +367,7 @@ void gyroTurn(direction x, float degrees, float maxVoltage){
 *
 * @param direction (left or right)
 * @param target in degrees
-* @Param desired voltage (positive number)
+* @param desired voltage (positive number)
 * @return none
 */
 void simpleTurn(direction x, float degrees, int voltage){
@@ -397,7 +397,7 @@ void simpleTurn(direction x, float degrees, int voltage){
 *
 * @param direction (left or right)
 * @param target in degrees
-* @Param desired voltage (positive number)
+* @param desired voltage (positive number)
 * @return none
 */
 void turn(direction x, float degrees, float maxVoltage){
